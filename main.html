@@ -16,7 +16,7 @@
             <input type="text" id="author"><br><br>
 
             <label for="isbn">ISBN</label><br>
-            <input type="text" id="isbn"><br><br> <!-- Corrected the id here -->
+            <input type="text" id="isbn"><br><br>
 
             <button id="submit" type="button">Add Book</button>
         </form>
@@ -24,14 +24,14 @@
         <div class="table">
             <table class="table-striped">
                 <thead>
-                    <tr id="book-list">
+                    <tr>
                         <th>Title</th>
                         <th>Author</th>
                         <th>ISBN#</th>
-						<th> </th>
+                        <th></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="book-list">
                     <!-- Rows will be added here dynamically using JavaScript -->
                 </tbody>
             </table>
