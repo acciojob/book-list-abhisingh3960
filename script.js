@@ -1,9 +1,9 @@
 let titleInput = document.getElementById('title');
 let authorInput = document.getElementById('author');
-let isbnInput = document.getElementById('book-list');
+let isbnInput = document.getElementById('isbn'); // Updated to match the corrected id
 let submitButton = document.getElementById('submit');
 let table = document.querySelector('.table-striped tbody');
-https://www.svgrepo.com/show/345221/three-dots.svg
+
 submitButton.addEventListener('click', () => {
     let titleValue = titleInput.value.trim();
     let authorValue = authorInput.value.trim();
@@ -11,6 +11,7 @@ submitButton.addEventListener('click', () => {
 
     if (titleValue && authorValue && isbnValue) {
         let newRow = table.insertRow(); 
+		newRow.id='book-list
 
         let titleCell = newRow.insertCell(0);
         let authorCell = newRow.insertCell(1);
