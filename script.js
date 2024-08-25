@@ -32,7 +32,7 @@ submitButton.addEventListener('click', () => {
 
         deleteCell.appendChild(deleteButton);
 
-        // Clear input fields after adding the book
+        // Clear adding the book
         titleInput.value = '';
         authorInput.value = '';
         isbnInput.value = '';
