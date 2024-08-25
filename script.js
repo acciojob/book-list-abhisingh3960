@@ -1,6 +1,6 @@
 let titleInput = document.getElementById('title');
 let authorInput = document.getElementById('author');
-let isbnInput = document.getElementById('isbn'); // Updated to match the corrected id
+let isbnInput = document.getElementById('isbn');
 let submitButton = document.getElementById('submit');
 let table = document.querySelector('.table-striped tbody');
 
@@ -10,13 +10,13 @@ submitButton.addEventListener('click', () => {
     let isbnValue = isbnInput.value.trim();
 
     if (titleValue && authorValue && isbnValue) {
-        let newRow = table.insertRow(); 
-		newRow.id='book-list
+        let newRow = table.insertRow();
+        newRow.id = 'book-list'; // Corrected the string assignment
 
         let titleCell = newRow.insertCell(0);
         let authorCell = newRow.insertCell(1);
         let isbnCell = newRow.insertCell(2);
-        let deleteCell = newRow.insertCell(3); 
+        let deleteCell = newRow.insertCell(3);
 
         titleCell.innerText = titleValue;
         authorCell.innerText = authorValue;
@@ -27,11 +27,12 @@ submitButton.addEventListener('click', () => {
         deleteButton.innerText = 'Delete';
         deleteButton.className = 'delete-button';
         deleteButton.addEventListener('click', () => {
-            table.deleteRow(newRow.rowIndex - 1); 
+            table.deleteRow(newRow.rowIndex - 1);
         });
 
-        deleteCell.appendChild(deleteButton); 
+        deleteCell.appendChild(deleteButton);
 
+        // Clear input fields after adding the book
         titleInput.value = '';
         authorInput.value = '';
         isbnInput.value = '';
